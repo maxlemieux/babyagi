@@ -171,6 +171,9 @@ else:
 # Configure OpenAI
 openai.api_key = OPENAI_API_KEY
 
+# Configure OpenAI base URL
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "")
+openai.base_url = OPENAI_BASE_URL
 
 # Llama embedding function
 class LlamaEmbeddingFunction(EmbeddingFunction):
